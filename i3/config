@@ -39,7 +39,7 @@ exec --no-startup-id pa-applet
 
 # GUI settings
 exec --no-startup-id feh --bg-scale /usr/share/backgrounds/archlinux/split.png
-exec --no-startup-id picom
+exec --no-startup-id picom --config $HOME/.config/picom/picom.conf --experimental-backend
 exec --no-startup-id numlockx on
 
 # Use pactl to adjust volume in PulseAudio.
@@ -319,8 +319,8 @@ mode "$mode_gaps_left" {
 }
 
 # window colors
-set $bgcolor #282828
-set $ibgcolor #363636
+set $bgcolor #363636
+set $ibgcolor #001718
 set $textcolor #ffffff
 set $ubgcolor #ff0000
 
@@ -343,3 +343,4 @@ bindsym $mod+n exec networkmanager_dmenu
 exec_always "setxkbmap -option 'grp:alt_shift_toggle' -layout us,ru"
 
 for_window [class="firefoxdeveloperedition"] move to workspace $ws10
+for_window [class="Xfce4-terminal"] border pixel 2
