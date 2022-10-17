@@ -256,3 +256,7 @@ label:focus {
 #keyboard-state > label.locked {
     background: rgba(0, 0, 0, 0.2);
 }
+
+#keyboard-state label.numlock {
+    background: rgba(0, 0, 0, 0.2);
+}
