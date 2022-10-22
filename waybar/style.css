@@ -7,12 +7,23 @@
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.9);
+    background-color: rgba(41, 43, 46, 0.9);
     border-bottom: 3px solid rgba(100, 114, 125, 0.5);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
     border-radius: 0;
+}
+
+#custom-right-arrow-dark,
+#custom-left-arrow-dark {
+    color: #1a1a1a;
+}
+
+#custom-right-arrow-light,
+#custom-left-arrow-light {
+    color: #292b2e;
+    background: #1a1a1a
 }
 
 window#waybar.hidden {
@@ -30,11 +41,6 @@ window#waybar.solo {
 
 window#waybar.termite {
     background-color: #3F3F3F;
-}
-
-window#waybar.chromium {
-    background-color: #000000;
-    border: none;
 }
 
 #workspaces button {
@@ -83,7 +89,6 @@ window#waybar.chromium {
 #idle_inhibitor,
 #mpd {
     padding: 0 10px;
-    margin: 6px 3px;
     color: #111111;
 }
 
@@ -98,69 +103,69 @@ window#waybar.chromium {
 }
 
 /* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
-}
+    .modules-right > widget:last-child > #workspaces {
+        margin-right: 0;
+    }
 
-#clock {
-    background-color: #bbccdd;
-}
+    #clock {
+        background-color: #bbccdd;
+    }
 
-#battery {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-#battery.charging, #battery.plugged {
-    color: #ffffff;
-    background-color: #26A65B;
-}
-
-@keyframes blink {
-    to {
+    #battery {
         background-color: #ffffff;
         color: #000000;
     }
-}
 
-#battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
+    #battery.charging, #battery.plugged {
+        color: #ffffff;
+        background-color: #26A65B;
+    }
 
-label:focus {
-    background-color: #000000;
-}
+    @keyframes blink {
+        to {
+            background-color: #ffffff;
+            color: #000000;
+        }
+    }
 
-#cpu {
-    background-color: #2ecc71;
-    color: #000000;
-}
+    #battery.critical:not(.charging) {
+        background-color: #f53c3c;
+        color: #ffffff;
+        animation-name: blink;
+        animation-duration: 0.5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
 
-#memory {
-    background-color: #bbccdd;
-}
+    label:focus {
+        background-color: #000000;
+    }
 
-#disk {
-    background-color: #964B00;
-}
+    #cpu {
+        background-color: #2ecc71;
+        color: #000000;
+    }
 
-#backlight {
-    background-color: #90b1b1;
-}
+    #memory {
+        background-color: #bbccdd;
+    }
 
-#network {
-    background-color: #2980b9;
-}
+    #disk {
+        background-color: #964B00;
+    }
 
-#network.disconnected {
-    background-color: #f53c3c;
-}
+    #backlight {
+        background-color: #90b1b1;
+    }
+
+    #network {
+        background-color: #2980b9;
+    }
+
+    #network.disconnected {
+        background-color: #f53c3c;
+    }
 
 #pulseaudio {
     background-color: #f1c40f;
@@ -170,20 +175,6 @@ label:focus {
 #pulseaudio.muted {
     background-color: #90b1b1;
     color: #2a5c45;
-}
-
-#custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
-    min-width: 100px;
-}
-
-#custom-media.custom-spotify {
-    background-color: #66cc99;
-}
-
-#custom-media.custom-vlc {
-    background-color: #ffa000;
 }
 
 #temperature {
@@ -216,28 +207,10 @@ label:focus {
     color: #2d3436;
 }
 
-#mpd {
-    background-color: #66cc99;
-    color: #2a5c45;
-}
-
-#mpd.disconnected {
-    background-color: #f53c3c;
-}
-
-#mpd.stopped {
-    background-color: #90b1b1;
-}
-
-#mpd.paused {
-    background-color: #51a37a;
-}
-
 #language {
     background: #00b093;
     color: #333333;
     padding: 0 5px;
-    margin: 6px 3px;
     min-width: 16px;
 }
 
@@ -245,7 +218,6 @@ label:focus {
     background: #97e1ad;
     color: #000000;
     padding: 0 0px;
-    margin: 0 5px;
     min-width: 16px;
 }
 
@@ -260,3 +232,4 @@ label:focus {
 #keyboard-state label.numlock {
     background: rgba(0, 0, 0, 0.2);
 }
+
