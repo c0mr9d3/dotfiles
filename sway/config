@@ -24,7 +24,7 @@ set $menu2 wofi -S run
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/archlinux/gritty.png fill
+output * bg /usr/share/backgrounds/archlinux/split.png fill
 #
 # Example configuration:
 #
