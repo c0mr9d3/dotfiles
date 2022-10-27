@@ -18,7 +18,7 @@ default_border pixel 2
 
 ### Idle configuration
 exec swayidle -w \
-          timeout 600 'swaylock -f -c 000000' \
+          timeout 600 'swaylock -f -c 000000 --image /usr/share/backgrounds/archlinux/mountain.jpg' \
           timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
           before-sleep 'swaylock -f -c 000000'
 
@@ -49,6 +49,7 @@ bindsym --locked {
 
 bindsym Control+$mod+f exec qutebrowser
 bindsym Control+$mod+n exec networkmanager_dmenu
+bindsym Control+$mod+l exec swaylock -f -c 000000 --image /usr/share/backgrounds/archlinux/mountain.jpg
 bindsym $mod+Return exec $term
 bindsym $mod+q kill
 
