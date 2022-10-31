@@ -1,5 +1,17 @@
 set $mod Mod4
 
+# window colors
+set $bgcolor #545454
+set $ibgcolor #001718
+set $textcolor #ffffff
+set $ubgcolor #ff0000
+
+# class                 border  backgr. text    indicator child_border
+client.focused          $bgcolor $bgcolor $textcolor $bgcolor $bgcolor
+client.focused_inactive $ibgcolor $ibgcolor $textcolor $ibgcolor $ibgcolor
+client.unfocused        $ibgcolor $ibgcolor $textcolor $ibgcolor $ibgcolor
+client.urgent           $ubgcolor $ubgcolor $textcolor $ubgcolor $ubgcolor
+
 set $left h
 set $down j
 set $up k
@@ -20,7 +32,7 @@ default_border pixel 2
 exec swayidle -w \
           timeout 600 'swaylock -f -c 000000 --image /usr/share/backgrounds/archlinux/mountain.jpg' \
           timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-          before-sleep 'swaylock -f -c 000000'
+          before-sleep 'swaylock -f -c 000000 --image /usr/share/backgrounds/archlinux/mountain.jpg'
 
 #
 # Example configuration:
@@ -50,6 +62,7 @@ bindsym --locked {
 bindsym Control+$mod+f exec qutebrowser
 bindsym Control+$mod+n exec networkmanager_dmenu
 bindsym Control+$mod+l exec swaylock -f -c 000000 --image /usr/share/backgrounds/archlinux/mountain.jpg
+bindsym Print exec grim
 bindsym $mod+Return exec $term
 bindsym $mod+q kill
 
@@ -189,3 +202,4 @@ input type:keyboard {
     xkb_layout us,ru
     xkb_options grp:alt_shift_toggle
 }
+
