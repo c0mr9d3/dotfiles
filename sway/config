@@ -22,6 +22,8 @@ set $menu1 wofi -S drun
 set $menu2 wofi -S run
 
 output * bg /usr/share/backgrounds/archlinux/split.png fill
+#output DP-1 resolution 1920x1080 position 1920,0
+#workspace 1 output DP-1
 output HDMI-A-1 resolution 1920x1080 position 1920,0
 
 gaps inner 3

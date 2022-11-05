@@ -1,5 +1,5 @@
 * {
-    font-family: "Roboto Mono Medium", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-family: "Roboto Mono Medium";
     font-size: 13px;
     border: none;
     border-radius: 5px;
@@ -195,8 +195,8 @@ label:focus {
 
 #language {
     background: #00b093;
-    color: #333333;
-    padding: 0 5px;
+    color: #000000;
+    padding: 0 4px;
     min-width: 16px;
 }
 
