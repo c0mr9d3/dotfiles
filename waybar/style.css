@@ -14,17 +14,6 @@ window#waybar {
     border-radius: 0;
 }
 
-#custom-right-arrow-dark,
-#custom-left-arrow-dark {
-    color: #1a1a1a;
-}
-
-#custom-right-arrow-light,
-#custom-left-arrow-light {
-    color: #292b2e;
-    background: #1a1a1a
-}
-
 window#waybar.hidden {
     opacity: 0.2;
 }
