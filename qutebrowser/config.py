@@ -18,5 +18,5 @@ c.auto_save.session = True
 c.content.autoplay = False
 
 # Font
-#c.fonts.default_family = "Terminus"
-#c.fonts.default_size = "14px"
+c.fonts.default_family = "JetBrains Mono"
+c.fonts.default_size = "12px"
