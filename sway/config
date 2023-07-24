@@ -18,8 +18,7 @@ set $up k
 set $right l
 
 set $term foot
-set $menu1 wofi -S drun
-set $menu2 wofi -S run
+set $menu1 fuzzel
 
 output * bg /usr/share/backgrounds/archlinux/split.png fill
 #output DP-1 resolution 1920x1080 position 1920,0
@@ -35,6 +34,8 @@ exec swayidle -w \
           timeout 600 'swaylock -f -c 000000 --image /usr/share/backgrounds/archlinux/mountain.jpg' \
           timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
           before-sleep 'swaylock -f -c 000000 --image /usr/share/backgrounds/archlinux/mountain.jpg'
+
+exec wl-gammactl -c 1.000 -b 1.000 -g 1.200
 
 #
 # Example configuration:
@@ -69,8 +70,7 @@ bindsym Print exec grim
 bindsym $mod+Return exec $term
 bindsym $mod+q kill
 
-bindsym $mod+F2 exec $menu2
-bindsym $mod+F3 exec $menu1
+bindsym $mod+F2 exec $menu1
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
