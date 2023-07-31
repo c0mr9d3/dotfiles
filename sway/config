@@ -24,6 +24,7 @@ output * bg /usr/share/backgrounds/archlinux/split.png fill
 #output DP-1 resolution 1920x1080 position 1920,0
 #workspace 1 output DP-1
 output HDMI-A-1 resolution 1920x1080 position 1920,0
+seat seat0 hide_cursor 3000
 
 gaps inner 3
 
